@@ -57,7 +57,7 @@ object Build : BuildType({
             conditions {
                 contains("teamcity.build.branch", "master")
             }
-            goals = "clean deploy"
+            goals = "versions:set -DnewVersion=0.0.2-%build.counter% clean deploy"
             userSettingsSelection = "settings.xml"
         }
     }
